@@ -11,9 +11,4 @@ app.get("/api", async(req, res) => {
     res.json({"users": ["userOne", "userTwo", "userThree"]})
 })
 
-app.get("*", async(req, res) => {
-    res.sendFile(path.join(reactBuild, 'index.html'))
-})
-
-
 app.listen(PORT, () => console.log('server running at ' + PORT))
